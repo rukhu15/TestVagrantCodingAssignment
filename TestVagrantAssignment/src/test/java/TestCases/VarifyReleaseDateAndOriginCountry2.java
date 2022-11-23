@@ -21,7 +21,7 @@ import utils.UtilityClass;
 import wiki_Pages.InformationPage;
 import wiki_Pages.SearchPage;
 
-public class VarifyReleaseDateAndOriginCountry {
+public class VarifyReleaseDateAndOriginCountry2 {
 	WebDriver driver;
 	RatingAndReviewPage ratingAndReviewPage;
 	MovieDetailsPage movieDetailsPage;
@@ -62,7 +62,7 @@ public class VarifyReleaseDateAndOriginCountry {
 		//get movie name from Exel sheet
 		exelData=UtilityClass.getDataFromExelSheet("TestData", 2, 1);
 		searchPage.enterMovieName(exelData);
-		searchPage.clickOnSuggestedName();
+		searchPage.clickOnSearchButton();
 		
 		//To get release date
 		releaseDateWiki=informationPage.getMovieReleaseDate();

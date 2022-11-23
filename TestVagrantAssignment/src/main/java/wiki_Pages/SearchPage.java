@@ -13,6 +13,9 @@ public class SearchPage {
 	@FindBy (xpath="//button[@type='submit']")
 	private WebElement searchButton;
 	
+	@FindBy (xpath="(//h3[@class='suggestion-title'])[1]")
+	private WebElement suggestedName;
+			
 	public SearchPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -23,5 +26,9 @@ public class SearchPage {
 	
 	public void clickOnSearchButton(){
 		searchButton.click();
+	}
+	
+	public void clickOnSuggestedName(){
+		suggestedName.click();
 	}
 }
